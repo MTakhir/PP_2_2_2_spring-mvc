@@ -2,20 +2,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Cars</title>
+    <title></title>
 </head>
 <body>
 <div>
     <table border="1">
         <tr>
-            <th>Car id</th>
+            <th>Car_id</th>
             <th>Model</th>
             <th>Colour</th>
         </tr>
-        <tr th:eath="car : $(cars)">
-            <td th:utext="$(car.getId)">id</td>
-            <td th:utext="$(car.getModel)">Model</td>
-            <td th:utext="$(car.getColour)">Colour</td>
+        <tr th:each="car : ${cars}">
+            <td th:utext="${car.getId}">id</td>
+            <td th:utext="${car.getModel}">Model</td>
+            <td th:utext="${car.getColour}">Colour</td>
         </tr>
     </table>
 </div>
